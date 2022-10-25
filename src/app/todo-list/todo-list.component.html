@@ -1,6 +1,6 @@
 <div class="content">
-    <h1>Todo Liste</h1>
-    <button (click)="setDialogIsOpen(true)">Todo hinzufügen</button>
+    <h1 i18n>Todo Liste</h1>
+    <button i18n (click)="setDialogIsOpen(true)">Todo hinzufügen</button>
     <div class="todo-list-wrapper">
         <app-todo-list-item *ngFor="let todo of todoList.todos" [todo]="todo">
         </app-todo-list-item>
