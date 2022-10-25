@@ -1,6 +1,6 @@
 # Angular-introduction
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6. This project was build to have a small introduction to angulars main functionalities. It does not claim to a perfect UX or best practices. Just for getting used to angular.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6. This project was build to have a small introduction to angulars main functionalities. It does not claim for a perfect UX or best practices. Just for getting used to angular.
 
 ## Development server
 

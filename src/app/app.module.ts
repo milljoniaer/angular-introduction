@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TodoListItemComponent } from './todo-list-item/todo-list-item.component
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

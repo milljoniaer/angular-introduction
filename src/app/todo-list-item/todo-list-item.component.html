@@ -1,12 +1,15 @@
 <div class="todo-container">
     <h2 class="done-{{todo.done}}">
         <label *ngIf="!inEdit" class="container">
-            <input #checkbox type="checkbox" (change)="setDone(todo)">
-            <span class="checkmark checked-{{checkbox.checked}}"></span>
+            <input type="checkbox" [(ngModel)]="todo.done">
+            <span class="checkmark checked-{{todo.done}}"></span>
             <span >{{ todo.title }}</span>
         </label>
         <input *ngIf="inEdit" #editField class="todo-edit-field" value="{{todo.title}}" (keyup.enter)="changeTodoTitle(editField.value)">
     </h2>
     <div class="remove-button" (click)="removeTodo(todo.id)"><i class="fa-solid fa-trash"></i></div>
-    <div class="edit-button" (click)="setInEdit(true)"><i class="fa-solid fa-pen"></i></div>
+    <div class="edit-button" (click)="setInEdit(!inEdit)">
+        <i *ngIf="!inEdit" class="fa-solid fa-pen"></i>
+        <i *ngIf="inEdit" class="fa-solid fa-floppy-disk"></i>
+    </div>
 </div>
