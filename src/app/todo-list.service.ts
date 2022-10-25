@@ -5,23 +5,23 @@ import { Injectable } from '@angular/core';
 })
 export class TodoListService {
 
-  todos = [
+  todoService = {todos: [
     { id: 0, title: "Angular Tutorial machen", done: false }
-  ]
+  ]}
 
   constructor() { }
 
   addTodo(todo: any) {
-    const rawTodo = { id: this.todos.length, ...todo }
-    this.todos.push(rawTodo);
+    const rawTodo = { id: this.todoService.todos.length, ...todo }
+    this.todoService.todos.push(rawTodo);
     return rawTodo;
   }
 
   removeTodo(id: number) {
-    this.todos = this.todos.filter((todo) => todo.id != id)
+    this.todoService.todos = this.todoService.todos.filter((todo) => todo.id != id)
   }
 
-  getTodos() {
-    return this.todos;
+  getTodoList() {
+    return this.todoService;
   }
 }

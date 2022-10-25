@@ -3,15 +3,7 @@
     <input #newTodo (keyup.enter)="addTodo(newTodo)">
     <button (click)="addTodo(newTodo)">Todo hinzufügen</button>
     <div class="todo-list-wrapper">
-        <div *ngFor="let todo of todos" class="todo-container">
-            <h2 class="done-{{todo.done}}">
-                <label class="container">
-                    <input #checkbox type="checkbox" (change)="setDone(todo)">
-                    <span class="checkmark checked-{{checkbox.checked}}"></span>
-                    <span>{{ todo.title }}</span>
-                </label>
-            </h2>
-            <div class="remove-button" (click)="removeTodo(todo.id)"><i class="fa-solid fa-trash"></i></div>
-        </div>
+        <app-todo-list-item *ngFor="let todo of todoList.todos" [todo]="todo">
+        </app-todo-list-item>
     </div>
 </div>

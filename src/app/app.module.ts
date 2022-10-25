@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoListItemComponent
   ],
   imports: [
     BrowserModule,
