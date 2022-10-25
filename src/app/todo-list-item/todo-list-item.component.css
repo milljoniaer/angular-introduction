@@ -22,6 +22,26 @@
     background-color: #a03545;
 }
 
+.edit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 40px;
+    margin-top: 2px;
+    background-color: #3f51b5;
+}
+
+.edit-button:hover {
+    background-color: #3f5190;
+}
+
+.todo-edit-field {
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+
 .container {
     display: block;
     position: relative;

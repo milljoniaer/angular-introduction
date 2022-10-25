@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TodoListService } from '../todo-list.service';
 
 @Component({
@@ -7,15 +7,12 @@ import { TodoListService } from '../todo-list.service';
   styleUrls: ['./todo-list-item.component.css']
 })
 
-export class TodoListItemComponent implements OnInit {
+export class TodoListItemComponent {
 
   @Input() todo: any;
+  inEdit: boolean = false;
 
   constructor(private todoService: TodoListService) { }
-
-  ngOnInit(): void {
-  }
-
 
   removeTodo(id: number) {
     this.todoService.removeTodo(id)
@@ -23,5 +20,14 @@ export class TodoListItemComponent implements OnInit {
 
   setDone(todo: any) {
     todo!.done = !todo?.done;
+  }
+
+  setInEdit(newInEdit: boolean) {
+    this.inEdit = newInEdit;
+  }
+
+  changeTodoTitle(title: string) {
+    this.todo.title = title;
+    this.inEdit = false;
   }
 }
