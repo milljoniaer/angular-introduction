@@ -91,3 +91,11 @@
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
+
+a {
+    margin-left: 32px;
+}
+
+h2 {
+    margin-bottom: 0;
+}

@@ -1,0 +1,8 @@
+<div class="dialog">
+    <h1>Todo hinzufügen</h1>
+    <label><span>Titel</span><input [(ngModel)]="newTodo.title"></label>
+    <label><span>Beschreibung</span><textarea [(ngModel)]="newTodo.description"></textarea></label>
+    <button (click)="addTodo()">Speichern</button>
+</div>
+<div class="overlay"></div>
+

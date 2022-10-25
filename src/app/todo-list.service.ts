@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 export interface Todo {
   title: string;
+  description?: string;
   done: boolean;
 }
 
@@ -20,7 +21,7 @@ export class TodoListService {
 
   todoList: TodoList = {
     todos: [
-      { id: 0, title: "Angular Tutorial machen", done: false }
+      { id: 0, title: "Angular Tutorial machen", done: false, description: "Für Satellytes muss ich noch ein Tutorial machen!" }
     ]
   }
 

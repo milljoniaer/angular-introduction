@@ -9,13 +9,11 @@ import { TodoListService } from '../todo-list.service';
 export class TodoListComponent {
 
   todoList = this.todoService.getTodoList();
-
-  inputField?: HTMLInputElement = undefined;
+  dialogIsOpen: boolean = false;
 
   constructor(private todoService: TodoListService) { }
 
-  addTodo(todoElement: HTMLInputElement) {
-    this.todoService.addTodo({ title: todoElement.value, done: false })
-    todoElement.value = ""
+  setDialogIsOpen(value: boolean) {
+    this.dialogIsOpen = value;
   }
 }

@@ -8,19 +8,25 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 import { FormsModule } from '@angular/forms';
+import { TodoItemDetailsComponent } from './todo-item-details/todo-item-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { TodoItemAddComponent } from './todo-item-add/todo-item-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     TodoListComponent,
-    TodoListItemComponent
+    TodoListItemComponent,
+    TodoItemDetailsComponent,
+    NotFoundComponent,
+    TodoItemAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
