@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TodoListService } from '../todo-list.service';
+import { TodoListService, TodoRaw } from '../todo-list.service';
 
 @Component({
   selector: 'app-todo-list-item',
@@ -9,7 +9,7 @@ import { TodoListService } from '../todo-list.service';
 
 export class TodoListItemComponent {
 
-  @Input() todo: any;
+  @Input() todo!: TodoRaw;
   inEdit: boolean = false;
 
   constructor(private todoService: TodoListService) { }
@@ -18,7 +18,7 @@ export class TodoListItemComponent {
     this.todoService.removeTodo(id)
   }
 
-  setDone(todo: any) {
+  setDone(todo: TodoRaw) {
     todo!.done = !todo?.done;
   }
 
