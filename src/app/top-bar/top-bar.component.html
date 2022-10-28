@@ -1,3 +1,6 @@
 <div class="header">
-    <span i18n class="title">Angular Einführung</span>
+    <a [routerLink]="['/']"><span [translate]="'title'" class="title">{{ 'title'  }}</span></a>
+    <select #lang class="language-switch" (change)="switchLanguage(lang.value)">
+        <option *ngFor="let lang of languages" value="{{lang}}">{{lang}}</option>
+    </select>
 </div>

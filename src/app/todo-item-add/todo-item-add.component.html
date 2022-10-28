@@ -1,8 +1,8 @@
-<div class="dialog">
-    <h1 i18n>Todo hinzufügen</h1>
-    <label><span i18n>Titel</span><input [(ngModel)]="newTodo.title"></label>
-    <label><span i18n>Beschreibung</span><textarea [(ngModel)]="newTodo.description"></textarea></label>
+<div class="dialog" (keydown.esc)="closeDialog()">
+    <h1 [translate]="'title'">{{'title'}}</h1>
+    <label><span [translate]="'todolist.add.field.title'">{{'todolist.add.field.title'}}</span><input [(ngModel)]="newTodo.title"></label>
+    <label><span [translate]="'todolist.add.field.description'">{{'todolist.add.field.description'}}</span><textarea [(ngModel)]="newTodo.description"></textarea></label>
     <button i18n (click)="addTodo()">Speichern</button>
 </div>
-<div class="overlay"></div>
+<div class="overlay" (click)="closeDialog()"></div>
 

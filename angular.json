@@ -4,10 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-first-project": {
-      "i18n": {
-        "sourceLocale": "de-DE",
-        "locales": {"en-US": "src/locale/messages.en.xlf"}
-      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["en-US"],
             "outputPath": "dist/my-first-project",
             "index": "src/index.html",
             "main": "src/main.ts",

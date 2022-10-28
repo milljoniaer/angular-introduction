@@ -13,4 +13,4 @@
         <i *ngIf="inEdit" class="fa-solid fa-floppy-disk"></i>
     </div>
 </div>
-<a [routerLink]="['/todo',todo.id]">Details ansehen...</a>
+<a [routerLink]="['/todo',todo.id]" [translate]="'todolist.item.details'">{{'todolist.item.details'}}</a>

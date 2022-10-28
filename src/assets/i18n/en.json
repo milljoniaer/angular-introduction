@@ -1,0 +1,17 @@
+{
+    "title": "Angular English",
+    "todolist": {
+        "title": "Todo List",
+        "item": {
+            "details": "View details..."
+        },
+        "add": {
+            "title": "Add todo",
+            "save": "Save",
+            "field": {
+                "title": "Title",
+                "description": "Description"
+            }
+        }
+    }
+}

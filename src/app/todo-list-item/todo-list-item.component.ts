@@ -12,7 +12,7 @@ export class TodoListItemComponent {
   @Input() todo!: TodoRaw;
   inEdit: boolean = false;
 
-  constructor(private todoService: TodoListService) { }
+  constructor(private todoService: TodoListService) {}
 
   removeTodo(id: number) {
     this.todoService.removeTodo(id)
